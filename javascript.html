@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration form</title>
+        <link rel="stylesheet" href="style1.css">
+        
+    </head>
+    <script type="text/javascript">
+        function validate()
+        {
+            var name=document.getElementById("name");
+            var phone=document.myform.phone.value;
+            var male=document.getElementById("male");
+            var female=document.getElementById("female");
+            var x=/^[A-z]+$/;
+            var y=/^\d{10}$/;
+            if(name.value==""||phone.value=="")
+            {
+                alert("NO Blank spaces are allowed");
+                return false;
+            }
+            if(name.value.match(x))
+            {
+                true;
+            }
+            else
+            {
+                alert("Name filed should have only letters");
+                return false;
+            }
+            if(phone.match(y))
+            {
+                true;
+            }
+            else
+            {
+                alert("Number is invalide");
+                return false;
+            }
+            if(male.Checked || Female.Checked)
+            { 
+                true;
+            }
+            else
+            {
+                alert("select one of the option");
+                return false;
+            }
+    
+        }
+    </script>
+<body>
+    <h1>Register here </h1><br><br>
+    <form name="myform"  onsubmit= "return validate() " action="">
+    <label>Name:<input type="text" id="name" name="name" placeholder="name"/></label><br><br>
+    <label>email:<input type="text" id="email" name="email" placeholder="email"/></label><br>
+    <label>Phone no:<input type="phone" id="phone"name="phone" placeholder="phone no"/></label><br>
+    <label>Age :<input type="number" id="age"name="age" placeholder="age"/></label><br>
+    <label>Gender:<br>
+        <input type="radio" name="male" id="male">Male<br>
+        <input type="radio" name="female"  id="female">Female<br>
+    </label>
+     <button type="submit">SUBMIT</button>   
+ 
+     </form>
+    
+</body>
+</html>
